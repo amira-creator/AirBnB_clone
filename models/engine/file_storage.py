@@ -30,6 +30,26 @@ class FileStorage:
             obj = {key: val.to_dict() for key, val in self.__objects.items()}
             json.dump(obj, an)
 
+        def classes(self):
+        """Function that returns dictionary of class instances"""
+
+        from models.base_model import BaseModel
+        from models.user import User
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
+
+        classes = {"Amenity": Amenity,
+                   "BaseModel": BaseModel,
+                   "City": City,
+                   "Place": Place,
+                   "Review": Review,
+                   "User": User,
+                   "State": State}
+        return (classes)
+
 
     def reload(self):
         """Function that deserializes JSON file to __objects."""
