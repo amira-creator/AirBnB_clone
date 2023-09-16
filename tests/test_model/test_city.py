@@ -46,8 +46,8 @@ class TestCity(unittest.TestCase):
 
         self.assertIsNotNone(City.__doc__)
 
-    def test_attributes(self):
-        """Function that tests attributes"""
+    def testAttribute(self):
+        """This is for testing attributes"""
 
         self.assertTrue('id' in self.city.__dict__)
         self.assertTrue('created_at' in self.city.__dict__)
@@ -55,8 +55,8 @@ class TestCity(unittest.TestCase):
         self.assertTrue('state_id' in self.city.__dict__)
         self.assertTrue('name' in self.city.__dict__)
 
-    def test_string_attributes(self):
-        """Function that tests string attributes"""
+    def stringAttributes_tests(self):
+        """This is for testing string attributes"""
 
         self.assertEqual(type(self.city.name), str)
         self.assertEqual(type(self.city.state_id), str)

@@ -41,14 +41,14 @@ class test_base_model(unittest.TestCase):
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
 
-    def test_attributes(self):
-        """Function that tests for attributes in basemodel"""
+    def testAttribute(self):
+        """This is  testing for attributes in basemodel"""
 
         self.assertTrue(hasattr(BaseModel, "__init__"))
         self.assertTrue(hasattr(BaseModel, "save"))
         self.assertTrue(hasattr(BaseModel, "to_dict"))
 
-    def test_init(self):
+    def testInit(self):
         """Function to test initializer"""
 
         self.assertTrue(isinstance(self.base, BaseModel))

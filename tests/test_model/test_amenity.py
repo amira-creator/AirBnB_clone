@@ -45,15 +45,15 @@ class test_amenity(unittest.TestCase):
 
         self.assertIsNotNone(Amenity.__doc__)
 
-    def test_attributes(self):
-        """Function that tests attributes"""
+    def testAttributes(self):
+        """It tests attributes"""
 
-        self.assertTrue('id' in self.amenity.__dict__)
+        self.assertTrue('id' in self.state.__dict__)
         self.assertTrue('created_at' in self.amenity.__dict__)
         self.assertTrue('updated_at' in self.amenity.__dict__)
         self.assertTrue('name' in self.amenity.__dict__)
 
-    def test_string_attributes(self):
+    def stringAttributes_str(self):
         """Function that tests string attributes"""
 
         self.assertEqual(type(self.amenity.name), str)

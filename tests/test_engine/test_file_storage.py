@@ -31,6 +31,7 @@ class fileStorage_test(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
+
     def test_style(self):
         """Function that checks if file is pep8"""
 

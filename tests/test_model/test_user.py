@@ -48,8 +48,8 @@ class test_user(unittest.TestCase):
 
         self.assertIsNotNone(User.__doc__)
 
-    def test_attributes(self):
-        """Function that tests attributes"""
+    def testAttribute(self):
+        """This is for testing attributes"""
 
         self.assertTrue('email' in self.my_user.__dict__)
         self.assertTrue('id' in self.my_user.__dict__)
@@ -60,7 +60,7 @@ class test_user(unittest.TestCase):
         self.assertTrue('last_name' in self.my_user.__dict__)
 
     def test_string_attributes(self):
-        """Function that tests string attributes"""
+        """This is for testing string attributes"""
 
         self.assertEqual(type(self.my_user.email), str)
         self.assertEqual(type(self.my_user.password), str)

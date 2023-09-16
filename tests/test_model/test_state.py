@@ -43,8 +43,8 @@ class test_state(unittest.TestCase):
 
         self.assertIsNotNone(State.__doc__)
 
-    def test_attributes(self):
-        """Function that tests attributes"""
+    def testAttributes(self):
+        """This is tests attributes"""
 
         self.assertTrue('id' in self.state.__dict__)
         self.assertTrue('created_at' in self.state.__dict__)
@@ -55,6 +55,11 @@ class test_state(unittest.TestCase):
         """Function that tests for functions"""
 
         self.assertIsNotNone(State.__doc__)
+
+    def test_string_attributes(self):
+        """Function that string tests attributes"""
+
+        self.assertEqual(type(self.state.name), str)
 
     def testSave(self):
         """This is func tests saving to json file"""

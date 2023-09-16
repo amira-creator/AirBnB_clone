@@ -46,8 +46,8 @@ class reviewTest(unittest.TestCase):
 
         self.assertIsNotNone(Review.__doc__)
 
-    def test_attributes(self):
-        """Function that tests attributes"""
+    def testAttributes(self):
+        """This is  for testing attributes"""
 
         self.assertTrue('id' in self.review.__dict__)
         self.assertTrue('created_at' in self.review.__dict__)
@@ -56,8 +56,8 @@ class reviewTest(unittest.TestCase):
         self.assertTrue('text' in self.review.__dict__)
         self.assertTrue('user_id' in self.review.__dict__)
 
-    def test_string_attributes(self):
-        """Function that tests string attributes"""
+    def stringAttribute_test(self):
+        """This is  for testing string attributes"""
 
         self.assertEqual(type(self.review.text), str)
         self.assertEqual(type(self.review.place_id), str)
