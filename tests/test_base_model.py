@@ -28,10 +28,12 @@ class Test_Base_Model(unittest.TestCase):
             pass
 
     def doc_str_test(self):
-        """it tests basemodel functions"""
+      """it tests basemodel functions"""
+
         self.assertIsNotNone(BaseModel.__doc__)
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
+
 
     def attribute_test(self):
         """it tests for attributes of  basemodel"""
