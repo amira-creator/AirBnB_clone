@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""Unittest module for FileStorage Class"""
+"""this is unittest module for file storage_class"""
 
 from models.engine.file_storage import FileStorage
 from models.user import User
 import unittest
 import json
 import os
+import pep8
 
 
-class Test_file_storage(unittest.TestCase):
-    """Class that test FileStorage"""
+class fileStorage_test(unittest.TestCase):
+    """class that test FileStorage"""
 
     @classmethod
     def class_set_up(cls_instance):
@@ -30,6 +31,12 @@ class Test_file_storage(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
+    def test_style(self):
+        """Function that checks if file is pep8"""
+
+        f_style = pep8.StyleGuide(quiet=True)
+        style = f_style.check_files(['models/engine/file_storage.py'])
+        self.assertEqual(style.total_errors, 0, "not pep8")
 
     def allTests(self):
         """It tests all instance"""

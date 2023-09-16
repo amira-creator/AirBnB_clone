@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-"""Unittest module for BaseModel class"""
+"""This is unittest module for BaseModel class"""
 
 from models.base_model import BaseModel
 import unittest
 import os
+import pep8
 
-class TestBaseModel(unittest.TestCase):
-    """Class to test BaseModel"""
+class test_base_model(unittest.TestCase):
+    """Class to test basemodel"""
 
     @classmethod
-    def setUpClass(cls_instance):
-        """Function that defines instructions within unittests"""
+    def setUp_class(cls_instance):
+        """determines  instructions within unittests"""
 
         cls_instance.base = BaseModel()
-        cls_instance.base.name = "Hannibal"
-        cls_instance.base.id = 13
+        cls_instance.base.name = "Helb"
+        cls_instance.base.id = 15
 
     @classmethod
-    def tearDownClass(cls_instance):
-        """Function that removes setup class"""
+    def remove_setUp_class(cls_instance):
+        """removes setup class"""
 
         del cls_instance.base
         try:
@@ -26,21 +27,40 @@ class TestBaseModel(unittest.TestCase):
         except FileNotFoundError:
             pass
 
-    def test_doc_string(self):
-        """Function that tests basemodel functions"""
+    def styleTest(self):
+        """tests if file is pep8"""
+
+        __style = pep8.StyleGuide(quiet=True)
+        style_test = __style.check_files(['models/base_model.py'])
+        self.assertEqual(style_test.total_errors, 0, "fix pep8")
+
+    def test_docString(self):
+        """tests basemodel functions"""
 
         self.assertIsNotNone(BaseModel.__doc__)
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
 
-    def test_save(self):
+    def test_attributes(self):
+        """Function that tests for attributes in basemodel"""
+
+        self.assertTrue(hasattr(BaseModel, "__init__"))
+        self.assertTrue(hasattr(BaseModel, "save"))
+        self.assertTrue(hasattr(BaseModel, "to_dict"))
+
+    def test_init(self):
+        """Function to test initializer"""
+
+        self.assertTrue(isinstance(self.base, BaseModel))
+
+    def testSave(self):
         """Function that tests saving of json file"""
 
         self.base.save()
         self.assertNotEqual(self.base.created_at, self.base.updated_at)
 
-    def test_to_dict(self):
-        """Function that tests dictionary objects of insatnces in basemodel"""
+    def to_dict_tests(self):
+        """tests dictionary objects of insatnces in basemodel"""
 
         in_dict = self.base.to_dict()
         self.assertEqual(self.base.__class__.__name__, 'BaseModel')
