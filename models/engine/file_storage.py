@@ -26,9 +26,9 @@ class FileStorage:
     def save(self):
         """it  saves obj to JSON file."""
 
-        with open(self.__file_path, "w", encoding="utf-8") as an:
+        with open(self.__file_path, "w", encoding="utf-8") as f:
             obj = {key: val.to_dict() for key, val in self.__objects.items()}
-            json.dump(obj, an)
+            json.dump(obj, f)
 
     def classes(self):
         """This returns dict of class instances"""
@@ -51,7 +51,7 @@ class FileStorage:
         return (classes)
 
     def reload(self):
-        """It is func that deserializes JSON file to __objects."""
+        """It  deserializes JSON file to __objects."""
 
         if not os.path.isfile(self.__file_path):
             return
