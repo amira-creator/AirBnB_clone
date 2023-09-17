@@ -51,7 +51,7 @@ class FileStorage:
         return (classes)
 
     def reload(self):
-        """Function that deserializes JSON file to __objects."""
+        """It is func that deserializes JSON file to __objects."""
 
         if not os.path.isfile(self.__file_path):
             return
