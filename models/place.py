@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Module that defines Place class."""
+"""This is Module determines Place class."""
 
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Class that defines Place instance attribute."""
+    """This is Class determines Place instance attribute."""
 
     city_id = ""
     user_id = ""
