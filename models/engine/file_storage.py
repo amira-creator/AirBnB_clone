@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""File that storages module for AirBnB_clone"""
+"""This file storages module for AirBnB_clone"""
 
 from datetime import datetime
 import json
