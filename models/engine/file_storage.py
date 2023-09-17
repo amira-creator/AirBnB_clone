@@ -7,18 +7,18 @@ import os
 
 
 class FileStorage:
-    """Class that stores data from Console."""
+    """class stores data from Console."""
 
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """ it returns all stored objects."""
+        """it returns all stored objects."""
 
         return (self.__objects)
 
     def new(self, obj):
-        """ it  sets obj with class_name key."""
+        """it  sets obj with class_name key."""
 
         class_key = "{}.{}".format(type(obj).__name__, obj.id)
         self.__objects[class_key] = obj
