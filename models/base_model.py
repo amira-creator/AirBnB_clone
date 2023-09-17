@@ -10,7 +10,7 @@ class BaseModel:
     """This class determines  BaseModel for Airbnb_clone"""
 
     def __init__(self, *args, **kwargs):
-        """Function that initializes instance public attributes"""
+        """This is func that initializes instance public attributes"""
 
         if kwargs is not None and kwargs != {}:
             for a in kwargs:
