@@ -7,7 +7,7 @@ from uuid import uuid4
 
 
 class BaseModel:
-    """Class determines  BaseModel for Airbnb_clone"""
+    """This class determines  BaseModel for Airbnb_clone"""
 
     def __init__(self, *args, **kwargs):
         """Function that initializes instance public attributes"""
