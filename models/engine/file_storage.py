@@ -63,7 +63,7 @@ class FileStorage:
             self.__objects = obj_dict
 
     def attributes(self):
-        """Function that returns class instances and their attributes"""
+        """It returns class instances & their attributes"""
 
         attributes = {
             "BaseModel":
