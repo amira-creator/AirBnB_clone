@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Module that defines State class"""
+"""This is Module determines State class"""
 
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """Class that defines State instance attribute"""
+    """This is Class determines State instance attribute"""
 
     name = ""

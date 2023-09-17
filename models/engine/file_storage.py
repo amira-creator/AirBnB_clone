@@ -29,6 +29,7 @@ class FileStorage:
         with open(self.__file_path, "w", encoding="utf-8") as an:
             obj = {key: val.to_dict() for key, val in self.__objects.items()}
             json.dump(obj, an)
+
     def classes(self):
         """Function that returns dictionary of class instances"""
 
@@ -49,7 +50,6 @@ class FileStorage:
                    "State": State}
         return (classes)
 
-
     def reload(self):
         """Function that deserializes JSON file to __objects."""
 
@@ -61,7 +61,6 @@ class FileStorage:
             obj_dict = {k: self.classes()[v["__class__"]](**v) for
                         k, v in obj_dict.items()}
             self.__objects = obj_dict
-
 
     def attributes(self):
         """Function that returns class instances and their attributes"""
