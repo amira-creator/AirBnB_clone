@@ -11,7 +11,6 @@ import os
 import pep8
 
 
-
 class TestConsole(unittest.TestCase):
     """This is Class to test the console"""
 
@@ -153,7 +152,7 @@ class TestConsole(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             self.console.onecmd("update User 13")
             self.assertEqual("** no instance found **\n", f.getvalue())
-            
+
     def test_cmd(self):
         """This is Function to test cmd"""
 
@@ -171,6 +170,7 @@ class TestConsole(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             self.console.onecmd("all Place")
             self.assertEqual("[]\n", f.getvalue())
+
 
 if __name__ == "__main__":
     unittest.main()

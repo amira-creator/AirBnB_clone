@@ -7,7 +7,6 @@ import re
 import cmd
 
 
-
 class HBNBCommand(cmd.Cmd):
     """Class determines public class instances for Airbnb clone."""
 
@@ -25,7 +24,7 @@ class HBNBCommand(cmd.Cmd):
         return (True)
 
     def do_update(self, line):
-        """Function that takes class name and id then updates an instance based on them"""
+        """Function take class name, id then updates instance based on them"""
 
         if line == "" or line is None:
             print("** class name missing **")
@@ -146,7 +145,7 @@ class HBNBCommand(cmd.Cmd):
             print(len(matches))
 
     def do_destroy(self, line):
-        """Function that takes class name and id then deletes an instance based on them."""
+        """Function take class name, id then deletes instance based on them."""
 
         if line == "" or line is None:
             print("** class name missing **")
