@@ -31,7 +31,7 @@ class FileStorage:
             json.dump(obj, an)
 
     def classes(self):
-        """Function that returns dictionary of class instances"""
+        """This returns dict of class instances"""
 
         from models.base_model import BaseModel
         from models.user import User
