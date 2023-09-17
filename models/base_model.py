@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module determines  BaseModel class and all instances"""
+"""It is a module determines BaseModel class and instances"""
 
 from datetime import datetime
 from models import storage
